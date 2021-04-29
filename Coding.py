@@ -1,6 +1,7 @@
 def encodeMessage(message, keycode):
     ciphertext = ""
-    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    #alphabet = "abcdefghijklmnopqrstuvwxyz" # old
+    alphabet = "!'^+%&/()=?_/*abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789" # lower, upper and some special keys.
     for letter in message:
 
         if letter in alphabet:
@@ -18,7 +19,8 @@ def encodeMessage(message, keycode):
 
 def decodeMessage(message, keycode):
     ciphertext = ""
-    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    #alphabet = "abcdefghijklmnopqrstuvwxyz" # old
+    alphabet = "!'^+%&/()=?_/*abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789" # lower, upper and some special keys.
     for letter in message:
 
         if letter in alphabet:
